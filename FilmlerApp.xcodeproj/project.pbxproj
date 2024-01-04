@@ -59,12 +59,36 @@
 				024EAED32B47297F006FFAB1 /* AppDelegate.swift */,
 				024EAED52B47297F006FFAB1 /* SceneDelegate.swift */,
 				024EAED72B47297F006FFAB1 /* ViewController.swift */,
-				024EAED92B47297F006FFAB1 /* Main.storyboard */,
+				024EAEE82B4729AE006FFAB1 /* ui */,
+				024EAEE72B4729A7006FFAB1 /* data */,
 				024EAEDC2B472980006FFAB1 /* Assets.xcassets */,
 				024EAEDE2B472980006FFAB1 /* LaunchScreen.storyboard */,
 				024EAEE12B472980006FFAB1 /* Info.plist */,
 			);
 			path = FilmlerApp;
+			sourceTree = "<group>";
+		};
+		024EAEE72B4729A7006FFAB1 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				024EAED92B47297F006FFAB1 /* Main.storyboard */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		024EAEE82B4729AE006FFAB1 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				024EAEE92B4729B3006FFAB1 /* views */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		024EAEE92B4729B3006FFAB1 /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

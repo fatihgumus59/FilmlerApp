@@ -67,7 +67,6 @@
                                         <connections>
                                             <outlet property="filmFiyat" destination="GsL-Ie-NGH" id="Q7e-k8-pof"/>
                                             <outlet property="filmImage" destination="Dwm-VB-Mqf" id="BWb-de-kxc"/>
-                                            <outlet property="sepeteEkle" destination="f1a-dI-JTO" id="XKl-fh-f1O"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

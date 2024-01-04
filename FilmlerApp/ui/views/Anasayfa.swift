@@ -51,7 +51,7 @@ class Anasayfa: UIViewController {
 
 
 }
-extension Anasayfa : UICollectionViewDataSource,UICollectionViewDelegate{
+extension Anasayfa : UICollectionViewDataSource,UICollectionViewDelegate,HucreProtokol{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return filmlerListesi.count
@@ -69,8 +69,33 @@ extension Anasayfa : UICollectionViewDataSource,UICollectionViewDelegate{
         hucre.layer.borderColor = UIColor.lightGray.cgColor
         hucre.layer.borderWidth = 0.3
         hucre.layer.cornerRadius = 10
+        
+        hucre.hucreProtokol = self
+        hucre.indexPath = indexPath
 
         
         return hucre
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let film = filmlerListesi[indexPath.row]
+        
+        performSegue(withIdentifier: "toDetay", sender: film)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if  segue.identifier == "toDetay"{
+            if let film = sender as? Filmler{
+                
+                let gidilecekVc = segue.destination as! DetaySayfa
+                gidilecekVc.film = film
+            }
+            
+        }
+    }
+    
+    func sepeteEkleTiklandi(indexPath: IndexPath) {
+        let film = filmlerListesi[indexPath.row]
+        print("\(film.ad!) Sepete Eklendi.")
     }
 }
